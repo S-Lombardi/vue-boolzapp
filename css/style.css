@@ -3,3 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background: linear-gradient(180deg, #009688 15%, #D9DBD4 15%);
+    height: 100vh;
+}
+
+/* LAYOUT */
+.container{
+    padding: 0;
+    border: 1px dashed red;
+    min-height: 500px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.sidebar{
+    width: 400px;
+    height: 100%;
+    background-color: rgb(241, 233, 233);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid gray;
+    
+}
+.top-bar-message{
+    width: calc(100% - 400px);
+    min-height: 50px;
+    background-color:#8d989d;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+
+.message-content{
+    width: calc(100% - 400px);
+    position: absolute;
+    top:0;
+    right:0;
+    padding-top: 80px;
+    bottom:0px;
+    background-color:#bca98f;
+}
+
+.bottom-bar-message{
+    width: calc(100% - 400px);
+    min-height: 90px;
+    background-color:#598193;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* FINE LAYOUT */
