@@ -10,11 +10,10 @@ body{
 }
 
 /* LAYOUT */
-.container{
-    padding: 0;
-    border: 1px dashed red;
+.container-main{
+    width: 1140px;
+    margin: 20px auto;
     min-height: 500px;
-    margin-top: 20px;
     position: relative;
 }
 
@@ -57,3 +56,8 @@ body{
     right: 0;
 }
 /* FINE LAYOUT */
+
+.container{
+    border: 1px dashed red;
+    min-height: 300px;
+}
