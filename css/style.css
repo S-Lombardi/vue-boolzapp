@@ -10,20 +10,19 @@ body{
 }
 
 /* LAYOUT */
-.container-main{
+.box-content{
     width: 1140px;
     margin: 20px auto;
+    padding: 0;
+    border: 1px dashed rgb(0, 4, 255);
     min-height: 500px;
     position: relative;
 }
 
 .sidebar{
     width: 400px;
-    height: 100%;
-    background-color: rgb(241, 233, 233);
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    min-height: 300px;
+    background-color: rgb(197, 149, 149);
     border-right: 1px solid gray;
     
 }
@@ -33,18 +32,20 @@ body{
     background-color:#8d989d;
     position: absolute;
     right: 0;
-    z-index: 3;
+    top: 0;
 }
 
 
 .message-content{
     width: calc(100% - 400px);
+    height: 100%;
     position: absolute;
-    top:0;
     right:0;
     padding-top: 80px;
-    bottom:0px;
-    background-color:#bca98f;
+    background-color: bisque;
+    top: 0;
+    z-index: -2;
+   
 }
 
 .bottom-bar-message{
@@ -55,9 +56,29 @@ body{
     bottom: 0;
     right: 0;
 }
-/* FINE LAYOUT */
 
 .container{
     border: 1px dashed red;
-    min-height: 300px;
 }
+.col{
+    border: 1px dashed rgb(0, 170, 20);
+
+}
+
+/* FINE LAYOUT */
+
+/* SIDEBAR */
+.color-topbar{
+    background-color: lightgrey;
+}
+.img-topbar{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.color-notifications{
+    background-color: rgb(122, 201, 232);
+
+
+}
+/* FINE SIDEBAR */
