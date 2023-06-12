@@ -21,15 +21,12 @@ body{
 
 .sidebar{
     width: 400px;
-    min-height: 300px;
-    background-color: rgb(197, 149, 149);
-    border-right: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(189, 189, 189);
     
 }
 .top-bar-message{
     width: calc(100% - 400px);
-    min-height: 50px;
-    background-color:#8d989d;
     position: absolute;
     right: 0;
     top: 0;
@@ -50,7 +47,6 @@ body{
 
 .bottom-bar-message{
     width: calc(100% - 400px);
-    min-height: 90px;
     background-color:#598193;
     position: absolute;
     bottom: 0;
@@ -64,21 +60,39 @@ body{
     border: 1px dashed rgb(0, 170, 20);
 
 }
-
 /* FINE LAYOUT */
 
+/* ULITITà */
+.txt-small{
+    font-size: 12px;
+}
+/* FINe ULITITà */
+
+
+
 /* SIDEBAR */
-.color-topbar{
-    background-color: lightgrey;
+.color-topbars{
+    background-color: rgb(215, 215, 215);
 }
 .img-topbar{
     width: 40px;
     border-radius: 50%;
 }
 
+.img-contacts{
+    width: 55px;
+    border-radius: 50%;
+}
 .color-notifications{
     background-color: rgb(122, 201, 232);
-
-
 }
 /* FINE SIDEBAR */
+
+
+
+/*BOTTOM-BAR */
+.resize{
+    resize: none;
+}
+
+/*FINE BOTTOM-BAR */

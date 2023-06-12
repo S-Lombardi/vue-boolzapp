@@ -15,135 +15,178 @@
 </head>
 
 <body>
+    <div id="app">
 
-    <div class="box-content">
-
-
-
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-            <div class="container">
-                <div class="row flex-column">
-                    <!-- USER -->
-                    <div class="col color-topbar">
-                        <div class="m-2 d-flex justify-content-between">
-                            <!-- immagine user + nome -->
-                            <div>
-                                <img src="img/avatar_io.jpg" class="img-topbar" alt="io">
-                                <span>Sofia</span>
-                            </div>
-                            <!-- Icone -->
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-circle-notch me-2"></i>
-                                <i class="fas fa-message me-2"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
+        <div class="box-content">
+    
+    
+    
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+    
+    
+                <!-- USER - SOFIA -->
+                <div class="p-2 d-flex justify-content-between color-topbars">
+                    <!-- immagine Sofia + nome -->
+                    <div>
+                        <img src="img/avatar_io.jpg" class="img-topbar" alt="io">
+                        <span>Sofia</span>
+                    </div>
+                    <!-- Icone -->
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-circle-notch me-2"></i>
+                        <i class="fas fa-message me-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <!-- FINE USER - SOFIA -->
+    
+                <!-- NOTIFICHE -->
+                <div class="d-flex p-3 color-notifications ">
+                    <!-- icona bell-->
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <!-- Ricevi notifiche... -->
+                    <div class="d-flex flex-column ms-3">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- FINE NOTIFICHE -->
+    
+                <!-- INPUT RICERCA CONTATTI-->
+                <div class="input-group input-group-sm flex-nowrap p-2 border-bottom">
+                    <!-- icona -->
+                    <span class="input-group-text" id="addon-wrapping">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+    
+                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!-- FINE INPUT RICERCA CONTATTI-->
+    
+                <!-- CONTATTI -->
+                <div v-for="(object,index) in contacts" class="p-3 d-flex justify-content-between border-bottom">
+                    <!-- immagine user + nome -->
+                    <div class="d-flex">
+                        <img :src="object.avatar" class="img-contacts" alt="1">
+    
+                        <div class="d-flex flex-column justify-content-start ms-3 lh-sm">
+                            <span>{{object.name}}</span>
+                            <div class="txt-small">Ultimo messaggio inviato</div>
                         </div>
                     </div>
-                    <!-- FINE USER -->
-
-                    <!-- NOTIFICHE -->
-                    <div class="col color-notifications ">
-                        <div class="d-flex m-2">
-                            <!-- icona -->
-                            <div class="d-flex align-items-center">
-                                <i class="fa-solid fa-bell-slash"></i>
-                            </div>
-
-                            <div class="d-flex flex-column ms-3">
-                                <span>Ricevi notifiche di nuovi messaggi</span>
-                                <a href="">Attiva notifiche desktop</a>
-                            </div>
-
-                        </div>
+                    <!-- orario -->
+                    <div class="txt-small">
+                        12:00
                     </div>
-                    <!-- FINE NOTIFICHE -->
-
-
-
-
-
-                </div>  
-                
-
+                </div>
+    
+    
+                <!-- FINE CONTATTI -->
             </div>
-
+            <!-- FINE SIDEBAR -->
+    
+    
+            <!-- TOP-BAR-MESSAGGI -->
+            <div class="top-bar-message color-topbars">
+                <div class="p-2 d-flex justify-content-between">
+                    <!-- immagine user + nome -->
+                    <div class="d-flex">
+                        <img src="img/avatar_1.jpg" class="img-topbar" alt="1">
+    
+                        <div class="d-flex flex-column justify-content-center ms-3 lh-sm">
+                            <span>Michele</span>
+                            <div class="txt-small">Ultimo accesso alle 12:00</div>
+                        </div>
+                    </div>
+                    <!-- Icone -->
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-magnifying-glass me-2"></i>
+                        <i class="fa-solid fa-paperclip me-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- FINE TOP-BAR-MESSAGGI -->
+    
+            <!-- MAIN MESAGGI -->
+            <div class="message-content">
+    
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsddssdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsddssdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsddssdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+                sdsdsdsdssdsdds
+    
+    
+    
+            </div>
+            <!-- MAIN MESSAGGI-->
+    
+            <!-- BOTTOM-BAR -->
+            <div class="bottom-bar-message">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1 ms-2">
+                            <!-- icona smile -->
+                            <div class="fs-3 d-flex h-100 justify-content-center align-items-center">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
         
+                        </div>
+                        <!-- Input messaggio -->
+                        <div class="col">
+                            <div class="m-2">
+                                <textarea class="form-control form-control-sm resize" placeholder="Scrivi" >
+                
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="col-1 me-2">
+                            <!-- icona microfono -->
+                            <div class="fs-3 d-flex h-100 justify-content-center align-items-center">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+    
+    
+                        </div>
+    
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- FINE BOTTOM-BAR -->
+    
+    
+    
+    
+    
+    
+    
+    
         </div>
-        <!-- FINE SIDEBAR -->
+    
+    
 
-
-
-        <div class="top-bar-message">
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-           
-          
-
-        </div>
-        <!-- MAIN -->
-        <div class="message-content">
-            
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            
-
-
-        </div>
-        <!-- MAIN -->
-
-        <!-- BOTTOM-BAR -->
-        <div class="bottom-bar-message">
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsddssdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-            sdsdsdsdssdsdds
-
-        </div>
-        <!-- FINE BOTTOM-BAR -->
-
-
-
-
-
-
-
-
-    </div>
-
-
+    </div>    
 
 
 
