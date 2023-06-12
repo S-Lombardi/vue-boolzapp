@@ -7,6 +7,7 @@
 body{
     background: linear-gradient(180deg, #009688 15%, #D9DBD4 15%);
     height: 100vh;
+    
 }
 
 /* LAYOUT */
@@ -37,7 +38,9 @@ body{
     position: absolute;
     right:0;
     padding-top: 80px;
-    background-color: bisque;
+    background-image: url(../img/mine.jpg) ;
+    object-fit: contain;
+    background-repeat: repeat;
     top: 0;
     z-index: -2;
    
@@ -45,7 +48,7 @@ body{
 
 .bottom-bar-message{
     width: calc(100% - 400px);
-    background-color:#598193;
+    background-color:rgb(243, 239, 235);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -74,6 +77,11 @@ body{
 }
 .color-notifications{
     background-color: rgb(122, 201, 232);
+}
+
+#contact-sidebar:hover{
+   background-color:rgb(228, 228, 228) ;
+   cursor: pointer;
 }
 /* FINE SIDEBAR */
 
