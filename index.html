@@ -72,8 +72,12 @@
                         <img :src="object.avatar" class="img-contacts" alt="1">
     
                         <div class="d-flex flex-column justify-content-start ms-3 lh-sm">
-                            <span>{{object.name}}</span>
-                            <div class="txt-small">Ultimo messaggio inviato</div>
+                            <span>
+                                {{object.name}}
+                            </span>
+                            <div class="txt-small">
+                                Ultimo messaggio inviato
+                            </div>
                         </div>
                     </div>
                     <!-- orario -->
@@ -115,12 +119,12 @@
             <div class="message-content">
                 <div class="container">
 
-                    <div class="row">
+                    <div class="row" v-for="(object,index) in contacts[contattoAttivo].messages">
 
-                        <div class="col">
+                        <div class="col" >
                             <div class="pe-4 pt-4">
-                                <div class="msg sent">
-                                    Hai portato a spasso il cane?
+                                <div class="msg sent" :class="contacts[contattoAttivo].messages[index].status ==='received' ? 'received' : 'sent' ">
+                                    {{contacts[contattoAttivo].messages[index].message}}
                                 </div>
 
                             </div>
@@ -130,36 +134,6 @@
 
                     </div>
 
-                    <div class="row">
-
-                        <div class="col">
-                            <div class="pe-4 ">
-                                <div class="msg sent">
-                                    Ricordati di stendere i panni
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                    <!-- Ricevuti -->
-                    <div class="row">
-                        <div class="col">
-                            <div class="ps-4">
-                                <div class="msg received">
-                                    fatto tutto!
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
                 </div>
     
     

@@ -163,11 +163,11 @@ createApp({
                             message: 'OK!!',
                             status: 'received'
                         }
-                    ],
-                },
-            ]
+                    ]
+                }
+            ],
 
-
+            contattoAttivo: 0,
 
         }
 
