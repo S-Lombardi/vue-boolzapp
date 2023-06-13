@@ -124,19 +124,21 @@
                         <div class="col" >
                             <div class="pe-4 pt-4">
                                 <div class="msg sent" :class="contacts[contattoAttivo].messages[index].status ==='received' ? 'received' : 'sent' ">
-                                    <!--  -->
-                                    <span>
+                                    <!-- Messaggio -->
+                                    <div>
                                         {{contacts[contattoAttivo].messages[index].message}}
-                                    </span>
+                                    </div>
+                                    <!-- Dropdown -->
                                     <div class="dropdown-message">
-                                        <button  class="button-message" title="dropdown">
+                                        <!-- Pulsante arrow -->
+                                        <button @click=" " class="button-message" title="dropdown">
                                             <i class="fas fa-angle-down"></i>
                                         </button>
-                                        <div >
+                                        <!-- contenuto dropdown -->
+                                        <div class="dropdown-content" >
                                             <a href="#info">info</a>
                                             <a href="#delete" @click="eliminaMessaggio(index)">Elimina</a>
                                         </div>
-
                                     </div>
                                 
                                 </div>
