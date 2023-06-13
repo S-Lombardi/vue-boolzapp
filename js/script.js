@@ -193,10 +193,22 @@ createApp({
 
                 this.contacts[this.contattoAttivo].messages.push(object);
                 this.messaggio_nuovo='';
+
+                //messaggio di di risposta 'ok' dopo un secondo
+                setTimeout(()=>{
+                    let object = {
+                        date: '',
+                        message: 'ok',
+                        status: 'received',
+                    }
+
+                    this.contacts[this.contattoAttivo].messages.push(object);
+
+                },1000);
+
             }
 
-
-
+            
         }
 
 
