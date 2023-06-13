@@ -30,6 +30,7 @@ body{
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 99; 
 }
 
 
@@ -43,7 +44,7 @@ body{
     object-fit: contain;
     background-repeat: repeat;
     top: 0;
-    z-index: -2;
+
    
 }
 
@@ -105,10 +106,14 @@ body{
     background-color: white;
     float: left;
 }
-/********* MAIN MESSAGGI ********/
 
-/*BOTTOM-BAR */
-.resize{
-    resize: none;
+.button-message{
+    border:none;
+    font-size: 20px;
+    background-color: #bf2828e6;
+    color: rgb(128, 128, 128);
+    float:right;
+    cursor: pointer;
 }
-/*FINE BOTTOM-BAR */
+
+/********* MAIN MESSAGGI ********/

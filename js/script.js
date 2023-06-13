@@ -195,7 +195,7 @@ createApp({
                 this.contacts[this.contattoAttivo].messages.push(object);
                 this.messaggio_nuovo='';
 
-                //messaggio di di risposta 'ok' dopo un secondo
+                //messaggio di risposta 'ok' dopo un secondo
                 setTimeout(()=>{
                     let object = {
                         date: '',
@@ -213,7 +213,6 @@ createApp({
 
         ricercaContatti(){
             
-            
             for(let i = 0; i <this.contacts.length; i++ ) {
 
                 let contact = this.contacts[i];
@@ -225,6 +224,11 @@ createApp({
                 }
 
             }
+        },
+
+        eliminaMessaggio(index){
+            this.contacts[this.contattoAttivo].messages.splice(index, 1);
+
         }
         
 
