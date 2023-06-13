@@ -168,6 +168,7 @@ createApp({
             ],
 
             contattoAttivo: 0,
+            messaggio_nuovo: '',
 
         }
 
@@ -176,8 +177,26 @@ createApp({
     methods: {
 
         //funzione per scegliere il contatto attivo
-        scegliContatto(index){
+        scegliContatto(index) {
             this.contattoAttivo = index;
+        },
+
+        //funzione per aggiungere un nuovo messaggio
+        aggiungiMessaggio() {
+            if (this.messaggio_nuovo != '') {
+                let object = {
+                    date: '',
+                    message: this.messaggio_nuovo,
+                    status: 'sent',
+
+                }
+
+                this.contacts[this.contattoAttivo].messages.push(object);
+                this.messaggio_nuovo='';
+            }
+
+
+
         }
 
 
