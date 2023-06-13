@@ -20,6 +20,7 @@ body{
 
 .sidebar{
     width: 400px;
+    height: 900px;
     background-color: rgb(255, 255, 255);
     border-right: 1px solid rgb(189, 189, 189);
     
@@ -63,17 +64,6 @@ body{
     background-color: rgb(215, 215, 215);
 }
 
-.visible{
-    display:block;
-    visibility: visible;
-   
-}
-
-.hide{
-    display:none;
-    visibility: collapse;
-   
-}
 /* FINe ULITITà */
 
 

@@ -212,21 +212,22 @@ createApp({
         },
 
         ricercaContatti(){
-            console.log(this.ricerca_contatto)
-
+            
+            
             for(let i = 0; i <this.contacts.length; i++ ) {
 
                 let contact = this.contacts[i];
-                
                 if(contact.name.toLowerCase().includes(this.ricerca_contatto.toLowerCase())){
                     contact.visible=true;
                 }
                 else{
                     contact.visible=false;
                 }
+
             }
         }
         
+
 
 
 

@@ -66,7 +66,7 @@
                 <!-- FINE INPUT RICERCA CONTATTI-->
     
                 <!-- CONTATTI -->
-                <div v-for="(object,index) in contacts" @click="scegliContatto(index)" :class="object.visible ? 'visible' : 'hide'"  id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
+                <div v-for="(object,index) in contacts.filter(object => object.visible === true)" @click="scegliContatto(index)"  id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
                     <!-- immagine user + nome -->
                     <div class="d-flex">
                         <img :src="object.avatar" class="img-contacts" alt="1">
