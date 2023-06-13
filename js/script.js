@@ -175,6 +175,11 @@ createApp({
     },
     methods: {
 
+        //funzione per scegliere il contatto attivo
+        scegliContatto(index){
+            this.contattoAttivo = index;
+        }
+
 
 
     },

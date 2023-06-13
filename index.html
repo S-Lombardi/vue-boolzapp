@@ -66,7 +66,7 @@
                 <!-- FINE INPUT RICERCA CONTATTI-->
     
                 <!-- CONTATTI -->
-                <div v-for="(object,index) in contacts" id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
+                <div v-for="(object,index) in contacts" @click="scegliContatto(index)"    id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
                     <!-- immagine user + nome -->
                     <div class="d-flex">
                         <img :src="object.avatar" class="img-contacts" alt="1">
@@ -76,7 +76,7 @@
                                 {{object.name}}
                             </span>
                             <div class="txt-small">
-                                Ultimo messaggio inviato
+                                Ultimo messaggio
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
             </div>
             <!-- FINE TOP-BAR-MESSAGGI -->
     
-            <!-- MAIN MESAGGI -->
+            <!--MESSAGGI -->
             <div class="message-content">
                 <div class="container">
 
@@ -126,10 +126,7 @@
                                 <div class="msg sent" :class="contacts[contattoAttivo].messages[index].status ==='received' ? 'received' : 'sent' ">
                                     {{contacts[contattoAttivo].messages[index].message}}
                                 </div>
-
                             </div>
-
-
                         </div>
 
                     </div>
@@ -138,7 +135,7 @@
     
     
             </div>
-            <!-- MAIN MESSAGGI-->
+            <!-- FINE MESSAGGI-->
     
             <!-- BOTTOM-BAR -->
             <div class="bottom-bar-message">
