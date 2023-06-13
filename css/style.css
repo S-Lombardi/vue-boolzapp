@@ -62,6 +62,18 @@ body{
 .color-topbars{
     background-color: rgb(215, 215, 215);
 }
+
+.visible{
+    display:block;
+    visibility: visible;
+   
+}
+
+.hide{
+    display:none;
+    visibility: collapse;
+   
+}
 /* FINe ULITITà */
 
 

@@ -61,12 +61,12 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
     
-                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="ricerca_contatto" @input="ricercaContatti"  type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- FINE INPUT RICERCA CONTATTI-->
     
                 <!-- CONTATTI -->
-                <div v-for="(object,index) in contacts" @click="scegliContatto(index)"    id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
+                <div v-for="(object,index) in contacts" @click="scegliContatto(index)" :class="object.visible ? 'visible' : 'hide'"  id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
                     <!-- immagine user + nome -->
                     <div class="d-flex">
                         <img :src="object.avatar" class="img-contacts" alt="1">

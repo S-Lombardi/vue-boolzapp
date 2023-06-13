@@ -169,6 +169,7 @@ createApp({
 
             contattoAttivo: 0,
             messaggio_nuovo: '',
+            ricerca_contatto: '',
 
         }
 
@@ -205,14 +206,33 @@ createApp({
                     this.contacts[this.contattoAttivo].messages.push(object);
 
                 },1000);
-
             }
 
             
+        },
+
+        ricercaContatti(){
+            console.log(this.ricerca_contatto)
+
+            for(let i = 0; i <this.contacts.length; i++ ) {
+
+                let contact = this.contacts[i];
+                
+                if(contact.name.toLowerCase().includes(this.ricerca_contatto.toLowerCase())){
+                    contact.visible=true;
+                }
+                else{
+                    contact.visible=false;
+                }
+            }
         }
+        
 
 
 
     },
 
 }).mount('#app')
+
+
+
