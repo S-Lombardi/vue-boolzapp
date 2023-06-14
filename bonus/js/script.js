@@ -226,6 +226,13 @@ createApp({
             }
         },
 
+        eliminaMessaggio(index){
+            this.contacts[this.contattoAttivo].messages.splice(index, 1);
+
+        }
+
+        //funzione per il pulsante dropdown
+
         
         
 

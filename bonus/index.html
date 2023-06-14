@@ -126,6 +126,18 @@
                                     <div>
                                         {{contacts[contattoAttivo].messages[index].message}}
                                     </div>
+                                    <!-- Dropdown -->
+                                    <div class="dropdown-message">
+                                        <!-- Pulsante arrow -->
+                                        <button @click=" " class="button-message" title="dropdown">
+                                            <i class="fas fa-angle-down"></i>
+                                        </button>
+                                        <!-- contenuto dropdown -->
+                                        <div class="dropdown-content" >
+                                            <a href="#info">info</a>
+                                            <a href="#delete" @click="eliminaMessaggio(index)">Elimina</a>
+                                        </div>
+                                    </div>
                                     
                                 
                                 </div>
