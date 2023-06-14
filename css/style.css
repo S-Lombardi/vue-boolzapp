@@ -126,7 +126,7 @@ body{
 
 
 .dropdown-content {
-    /* display: none; */
+    display: none;
     position: absolute;
     right: 21px;
     bottom: -72px;

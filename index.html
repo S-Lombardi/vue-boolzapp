@@ -85,8 +85,6 @@
                         12:00
                     </div>
                 </div>
-    
-    
                 <!-- FINE CONTATTI -->
             </div>
             <!-- FINE SIDEBAR -->
@@ -97,10 +95,10 @@
                 <div class="p-2 d-flex justify-content-between">
                     <!-- immagine user + nome -->
                     <div class="d-flex">
-                        <img src="img/avatar_1.jpg" class="img-topbar" alt="1">
+                        <img :src="contacts[contattoAttivo].avatar" class="img-topbar" alt="1">
     
                         <div class="d-flex flex-column justify-content-center ms-3 lh-sm">
-                            <span>Michele</span>
+                            <span>{{contacts[contattoAttivo].name}}</span>
                             <div class="txt-small">Ultimo accesso alle 12:00</div>
                         </div>
                     </div>
