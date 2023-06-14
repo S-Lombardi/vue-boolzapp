@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vue Boolzapp</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="box-content">
+    
+    
+    
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+    
+                <!-- USER - SOFIA -->
+                <div class="p-2 d-flex justify-content-between color-topbars">
+                    <!-- immagine Sofia + nome -->
+                    <div>
+                        <img src="img/avatar_io.jpg" class="img-topbar" alt="io">
+                        <span>Sofia</span>
+                    </div>
+                    <!-- Icone -->
+                    <div class="d-flex align-items-center text-body-tertiary fs-5">
+                        <i class="fas fa-circle-notch me-3"></i>
+                        <i class="fas fa-message me-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical  me-3"></i>
+                    </div>
+                </div>
+                <!-- FINE USER - SOFIA -->
+    
+                <!-- NOTIFICHE -->
+                <div class="d-flex p-3 color-notifications ">
+                    <!-- icona bell-->
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <!-- Ricevi notifiche... -->
+                    <div class="d-flex flex-column ms-3">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- FINE NOTIFICHE -->
+    
+                <!-- INPUT RICERCA CONTATTI-->
+                <div class="input-group input-group-sm flex-nowrap p-2 border-bottom">
+                    <!-- icona -->
+                    <span class="input-group-text" id="addon-wrapping">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+    
+                    <input v-model="ricerca_contatto" @input="ricercaContatti"  type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!-- FINE INPUT RICERCA CONTATTI-->
+    
+                <!-- CONTATTI -->
+                <div v-for="(object,index) in contacts.filter(object => object.visible === true)" @click="scegliContatto(index)"  id="contact-sidebar" class="p-3 d-flex justify-content-between border-bottom">
+                    <!-- immagine user + nome -->
+                    <div class="d-flex">
+                        <img :src="object.avatar" class="img-contacts" alt="1">
+    
+                        <div class="d-flex flex-column justify-content-start ms-3 lh-sm">
+                            <span>
+                                {{object.name}}
+                            </span>
+                            <div class="txt-small">
+                                Ultimo messaggio
+                            </div>
+                        </div>
+                    </div>
+                    <!-- orario -->
+                    <div class="txt-small">
+                        12:00
+                    </div>
+                </div>
+                <!-- FINE CONTATTI -->
+            </div>
+            <!-- FINE SIDEBAR -->
+    
+    
+            <!-- TOP-BAR-MESSAGGI -->
+            <div class="top-bar-message color-topbars">
+                <div class="p-2 d-flex justify-content-between">
+                    <!-- immagine user + nome -->
+                    <div class="d-flex">
+                        <img :src="contacts[contattoAttivo].avatar" class="img-topbar" alt="1">
+    
+                        <div class="d-flex flex-column justify-content-center ms-3 lh-sm">
+                            <span>{{contacts[contattoAttivo].name}}</span>
+                            <div class="txt-small">Ultimo accesso alle 12:00</div>
+                        </div>
+                    </div>
+                    <!-- Icone -->
+                    <div class="d-flex align-items-center text-body-tertiary fs-5">
+                        <i class="fa-solid fa-magnifying-glass me-3"></i>
+                        <i class="fa-solid fa-paperclip me-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- FINE TOP-BAR-MESSAGGI -->
+    
+            <!--MESSAGGI -->
+            <div class="message-content">
+                <div class="container">
+
+                    <div class="row" v-for="(object,index) in contacts[contattoAttivo].messages">
+
+                        <div class="col" >
+                            <div class="pe-4 pt-4">
+                                <div class="msg sent" :class="contacts[contattoAttivo].messages[index].status ==='received' ? 'received' : 'sent' ">
+                                    <!-- Messaggio -->
+                                    <div>
+                                        {{contacts[contattoAttivo].messages[index].message}}
+                                    </div>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+    
+    
+            </div>
+            <!-- FINE MESSAGGI-->
+    
+            <!-- BOTTOM-BAR -->
+            <div class="bottom-bar-message">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1 ms-2">
+                            <!-- icona smile -->
+                            <div class="fs-4 d-flex h-100 justify-content-center align-items-center text-body-secondary">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+        
+                        </div>
+                        <!-- Input messaggio -->
+                        <div class="col">
+                            <div class="m-2">
+                                <input v-model="messaggio_nuovo" @keyup.enter="aggiungiMessaggio" class="form-control" type="text" placeholder="Scrivi un messaggio..">
+                            </div>
+                        </div>
+                        <div class="col-1 me-2">
+                            <!-- icona microfono -->
+                            <div class="fs-4 d-flex h-100 justify-content-center align-items-center text-body-secondary">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+    
+    
+                        </div>
+    
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <!-- FINE BOTTOM-BAR -->
+    
+    
+    
+    
+    
+    
+    
+    
+        </div>
+    
+    
+
+    </div>    
+
+
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
