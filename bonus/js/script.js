@@ -171,6 +171,7 @@ createApp({
             messaggio_nuovo: '',
             ricerca_contatto: '',
 
+
         }
 
 
@@ -211,6 +212,7 @@ createApp({
             
         },
 
+        //funzione per la ricerca contatti nela sidebar
         ricercaContatti(){
             
             for(let i = 0; i <this.contacts.length; i++ ) {
@@ -225,17 +227,12 @@ createApp({
 
             }
         },
+       
 
+        //funzione per eliminare un messaggio
         eliminaMessaggio(index){
             this.contacts[this.contattoAttivo].messages.splice(index, 1);
-
-        }
-
-        //funzione per il pulsante dropdown
-
-        
-        
-
+        },
 
 
 

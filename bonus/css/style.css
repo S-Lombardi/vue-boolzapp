@@ -110,11 +110,8 @@ body{
     background-color: white;
     float: left;
 }
-.dropdown-message{
-   
-}
 
-.button-message{
+/* .button-message{
     border:none;
     font-size: 20px;
     background-color: #bf282800;
@@ -122,12 +119,14 @@ body{
     
 }
 
-
+.shownDrop + .dropdown-content {
+    display: block ;
+}
 .dropdown-content {
     display: none;
     position: absolute;
     right: 21px;
-    bottom: -72px;
+    bottom: -80px;
     background-color: #f1f1f1;
     min-width: 120px;
     overflow: auto;
@@ -144,8 +143,8 @@ body{
 
 .dropdown-message a:hover {
     background-color: #ddd;
-}
-/********* MAIN MESSAGGI ********/
+} */
+/*********FINE  MAIN MESSAGGI ********/
 
 
-/********* MAIN MESSAGGI ********/
+

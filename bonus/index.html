@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Vue Boolzapp</title>
@@ -127,17 +128,17 @@
                                         {{contacts[contattoAttivo].messages[index].message}}
                                     </div>
                                     <!-- Dropdown -->
-                                    <div class="dropdown-message">
-                                        <!-- Pulsante arrow -->
-                                        <button @click=" " class="button-message" title="dropdown">
+                                    
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fas fa-angle-down"></i>
                                         </button>
-                                        <!-- contenuto dropdown -->
-                                        <div class="dropdown-content" >
-                                            <a href="#info">info</a>
-                                            <a href="#delete" @click="eliminaMessaggio(index)">Elimina</a>
-                                        </div>
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="#">info</a></li>
+                                          <li><a class="dropdown-item" @click="eliminaMessaggio(index)"  href="#">Elimina</a></li>
+                                        </ul>
                                     </div>
+
                                     
                                 
                                 </div>
